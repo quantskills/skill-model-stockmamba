@@ -27,6 +27,20 @@ python -m pip install -e .
 
 Python 3.10 or newer is recommended.
 
+
+## Method overview
+
+StockMamba combines market-state modeling with cross-sectional stock prediction. A selective state-space scanner extracts market context, a factor gate adjusts factor importance, temporal and cross-stock attention model dependencies, and temporal distillation produces the current prediction representation. The training objective combines U-shaped weighted MSE with a Pearson IC term to balance return error and cross-sectional ranking.
+
+## Reference paper
+
+This project is inspired by **StockMamba: State-Space Gated Stock Transformer with Rank-Aware Optimization**.
+
+- [Mathematics 2026, 14(11), 1859](https://doi.org/10.3390/math14111859)
+- [MDPI full text](https://www.mdpi.com/2227-7390/14/11/1859)
+
+This repository is an independent, unofficial community implementation. The paper's Alpha158 features, index constituents, and market data are not distributed here.
+
 ## Quick start
 
 ```bash

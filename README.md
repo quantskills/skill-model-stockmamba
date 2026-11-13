@@ -42,6 +42,21 @@ python -m pip install -e .
 
 建议使用 Python 3.10 或更高版本。训练和推理依赖 PyTorch、Pandas、PyArrow、NumPy 和 PyYAML。
 
+
+## 方法简介
+
+StockMamba 将市场状态建模和股票横截面预测结合起来：选择性状态空间扫描器提取市场状态，因子门控根据市场状态调整因子权重，时间注意力和跨股票注意力分别建模时间依赖与股票间关系，最后通过时间蒸馏生成当前时点的预测表示。训练损失包含 U 形加权 MSE 和 Pearson IC 项，用于兼顾收益误差与横截面排序。
+
+## 参考论文
+
+本项目参考：
+
+- **StockMamba: State-Space Gated Stock Transformer with Rank-Aware Optimization**
+- 论文链接：[Mathematics 2026, 14(11), 1859](https://doi.org/10.3390/math14111859)
+- 在线全文：[MDPI](https://www.mdpi.com/2227-7390/14/11/1859)
+
+本仓库是独立的非官方社区实现。论文中的 Alpha158、指数成分和市场数据不会随仓库提供，使用者需要自行核对输入特征、股票池和预处理。
+
 ## 快速开始
 
 生成合成样例并运行一轮训练、推理：
