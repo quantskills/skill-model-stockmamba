@@ -1,3 +1,6 @@
-name: skill-template
+name: model-stockmamba
 entrypoint: SKILL.md
 canonical_root: SKILL.md
+display_name: StockMamba 多因子模型
+short_description: 使用 StockMamba 风格状态空间与注意力模型生成股票预测信号。
+default_prompt: 使用用户提供的多因子序列和市场上下文训练 StockMamba，按验证集指标选择 checkpoint 并导出信号。

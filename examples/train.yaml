@@ -1,0 +1,19 @@
+model:
+  lookback: 4
+  d_model: 32
+  temporal_heads: 4
+  stock_heads: 2
+  beta: 5.0
+  dropout: 0.1
+loss:
+  alpha: 0.5
+  gamma: 1.0
+training:
+  epochs: 2
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  min_stocks: 8
+split:
+  train_dates: [20240102, 20240103, 20240104, 20240105]
+  validation_dates: [20240106]
